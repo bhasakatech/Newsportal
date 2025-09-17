@@ -1,0 +1,12 @@
+<sly data-sly-use.userModel="com.adobe.aem.newsportal.core.models.UserInfoModel">
+  <p>Name: ${userModel.userName}</p>
+  <p>Id: ${userModel.userId}</p>
+  <p>Gender: ${userModel.gender}</p>
+
+  <ul data-sly-list.detail="${userModel.userExtraInfo}">
+     <li>Mobile No: ${detail.mobileNo}</li>
+    <li>Address : ${detail.address}</li>
+  </ul>
+</sly>
+
+ 

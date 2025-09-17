@@ -1,0 +1,16 @@
+{
+  "test": {
+    "jcr:primaryType": "nt:unstructured",
+    "userName": "Sushma",
+    "userId": "123",
+    "gender": "Female",
+    "marks": "95",
+    "userExtraInfo": {
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "mobileNo": "9876543210",
+        "address": "Hyderabad"
+      }
+    }
+  }
+}

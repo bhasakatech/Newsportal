@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Task Cards"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General "
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <card-title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Card Title"
+                                name="./cardTitle"/>
+                            <card-desc
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                fieldLabel="Description"
+                                name="./description"
+                                useFixedInlineToolbar="{Boolean}true"/>
+                            <category
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Gender Select"
+                                name="./genderSelect">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <men
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Men"
+                                        value="Men"/>
+                                    <women
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Women"
+                                        value="Women"/>
+                                    <kids
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Kids"
+                                        value="Kids"/>
+                                </items>
+                            </category>
+                        </items>
+                    </general>
+                    <product-cards
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Product-cards "
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <product-details
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Product Details ">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./productDetails">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <productcard-title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="ProductCard Title"
+                                            name="./productcardTitle"/>
+                                        <productcard-price
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            fieldLabel="ProductCard Price"
+                                            name="./productcardPrice"/>
+                                        <productcard-image
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="ProductCard Image"
+                                            name="./productcardImage"/>
+                                        <productcard-expirydate
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            fieldLabel="ProductCard Expiry"
+                                            name="./productcardExpiry"/>
+                                        <productcard-color
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                            fieldLabel="ProductCard Colour"
+                                            name="./productcardColor"/>
+                                    </items>
+                                </field>
+                            </product-details>
+                        </items>
+                    </product-cards>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

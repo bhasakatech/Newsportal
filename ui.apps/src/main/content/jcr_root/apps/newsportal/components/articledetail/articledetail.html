@@ -1,0 +1,22 @@
+<sly data-sly-use.articleModel="com.adobe.aem.newsportal.core.models.ArticleDetailModel" />
+ 
+<div data-sly-test="${!articleModel.articleIsExpired}">
+ <p>${articleModel.articleTitle}</p>
+<p>${articleModel.articleDescription}</p>
+
+<h5>PageTitle:${articleModel.pageTitle}</h5>
+ 
+<h6>PageDescription:${articleModel.pageDescription}</h6>
+
+<ul data-sly-list.article="${articleModel.articleDetails}">
+<li> 
+<a href="${article.articlePath}">${article.articleTitle}</a>
+</li>
+</ul>
+ 
+</div>
+ 
+ <div data-sly-test="${articleModel.articleIsExpired}">
+ <h2>Article is Expired</h2>
+ </div>
+ 

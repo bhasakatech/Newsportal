@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Information"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <user-name
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="User Name"
+                name="./userName"/>
+            <user-id
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                fieldLabel="User Id"
+                name="./userId"/>
+            <user-gender
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                fieldLabel="Gender"
+                name="./gender">
+                <items jcr:primaryType="nt:unstructured">
+                    <male
+                        jcr:primaryType="nt:unstructured"
+                        text="Male"
+                        value="Male"/>
+                    <female
+                        jcr:primaryType="nt:unstructured"
+                        text="Female"
+                        value="Female"/>
+                </items>
+            </user-gender>
+            <user-extrainfo
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="User Extra Info">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    name="./userExtraInfo">
+                    <items jcr:primaryType="nt:unstructured">
+                        <user-mobileno
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                            fieldLabel="Mobile No"
+                            name="./mobileNo"/>
+                        <user-address
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                            fieldLabel="Address"
+                            name="./address"/>
+                    </items>
+                </field>
+            </user-extrainfo>
+        </items>
+    </content>
+</jcr:root>

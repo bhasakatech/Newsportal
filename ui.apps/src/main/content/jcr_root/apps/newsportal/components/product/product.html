@@ -1,0 +1,14 @@
+ <sly data-sly-use.model="com.adobe.aem.newsportal.core.models.ProductModel"/>
+    <ul  data-sly-list.product="${model.productslist}"> 
+   
+   <li> <Strong>ID :</Strong> ${product.id}</li>
+      <li> <Strong>Title :</Strong> ${product.title}  - $${product.price} </li>
+   
+    <li ><img src="${product.image}" /></li>
+   
+   <li> <Strong> DESCRIPTION :</Strong> ${product.description}</li>
+      
+   <li> <Strong>RATING :</Strong> ${product.rating.rate}★</li>
+      <li> <Strong>COUNT :</Strong> ${product.rating.count}</li>
+  </ul>
+ 

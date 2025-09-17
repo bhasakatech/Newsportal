@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title=" Product Cards"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <product-title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Product Title"
+                                name="./productTitle"/>
+                            <product-desc
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldLabel="Description"
+                                name="./description"/>
+                            <product-price
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="Product Price"
+                                name="./productPrice"/>
+                            <gender-status
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Gender Select"
+                                name="./genderSelect">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <male
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Male"
+                                        value="male"/>
+                                    <female
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Female"
+                                        value="female"/>
+                                </items>
+                            </gender-status>
+                        </items>
+                    </general>
+                    <products
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Products Available"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <product-type
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Product Type"
+                                name="./productType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <western
+                                        jcr:primaryType="nt:unstructured"
+                                        text="western"
+                                        value="western"/>
+                                    <tradition
+                                        jcr:primaryType="nt:unstructured"
+                                        text="tradition"
+                                        value="tradition"/>
+                                </items>
+                            </product-type>
+                            <products
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="No Of Products"
+                                name="./noOfProducts"/>
+                        </items>
+                    </products>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

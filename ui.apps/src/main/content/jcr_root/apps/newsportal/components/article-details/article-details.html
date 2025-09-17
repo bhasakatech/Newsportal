@@ -1,0 +1,36 @@
+<div data-sly-template.authordev>
+<h3>First Name: sushma</h3>
+ <h3>Last Name: chagani</h3>
+ <p>Email:chsushma@gmail.com</p></div>
+
+
+
+<h2>${properties.articleTitle}</h2>
+<p>${properties.articlePrice}</p>
+ <p>${properties.articleLabel}</p>
+ <p>${'yyyy-MM-dd' @ format=properties.articleExpiry}</p>
+<img src="/content/dam/newsportal/asset.jpg">
+
+<div data-sly-include="author-details.html"></div>
+
+<ul data-sly-repeat.label="${properties.articleLabel}">
+<li>${label}</li>
+</ul>
+
+<div data-sly-resource="${'button-1'@resourceType='newsportal/components/button'}"></div>
+
+<ul data-sly-list.label="${properties.articleLabel}">
+<li>${label}</li>
+<li data-sly-test="${labellist.first}">${label}</li>
+</ul>
+
+<div data-sly-call="${authordev}"></div>
+
+ 
+ 
+
+
+<h1 data-sly-element="${properties.articleTitletype}">${properties.articleTitle}</h1>
+ 
+ 
+ 
