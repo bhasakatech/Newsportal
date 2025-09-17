@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-$AEM_HOST    = "https://author-p139816-e1420456.adobeaemcloud.com"
+$AEM_HOST    = "https://author-p139816-e1765605.adobeaemcloud.com/"
 $ORG_ID        = "E1891E586621321E0A495C63@AdobeOrg"
 $CLIENT_ID     = "5a62e035a17b4657a2edd6871653cd4a"
 $CLIENT_SECRET = "p8e-erMx7icl59hiM5quREkY0PvKmNQ2Ppmk"
